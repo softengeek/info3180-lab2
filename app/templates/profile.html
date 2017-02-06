@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block css %}
+    <style>
+        .profile img {
+            float: left;
+            padding: 1%;
+            margin-right: 5%;
+            border: 1px solid black;
+        }
+        
+        .profile-info {
+            border: 1px solid black;
+            width: 30%;
+            margin-right: 35%;
+            float: right;
+            padding-left: 1%;
+        }
+        
+        h3 {
+            background: lightblue;
+            margin: 0;
+            border-bottom: 1px solid black;
+        }
+    </style>
+    
+{% endblock %}
+
+{% block main %}
+
+<h1>Profile</h1>
+<hr>
+
+<div class="profile">
+    <img src="{{ url_for('static', filename = 'shadow.jpg') }}">
+    <div class="profile-info">
+        <h3>Shadow of Mordor</h3>
+        <p>Today's Date: {{now}}</p>
+        <hr>
+        <p>Username: SModah</p>
+        <p>ID Number: 620012365</p>
+        <p>Age: 35</p>
+        <p>Gender: Male</p>
+        <hr>
+        <p>I rule the shadows</p>
+    </div>
+</div>
+
+{% endblock %}
